@@ -60,8 +60,9 @@ else
 {
     var audio=new Audio("./sounds/wrong.mp3");
     $("body").addClass("game-over");
+    audio.play();
     setTimeout(function(){
-      $("body").removeClass("game-over")
+      $("body").removeClass("game-over");
     },200);
     $("h1").text("Game Over, Press Any Key to Restart");
     b=false;
