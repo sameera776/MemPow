@@ -40,6 +40,7 @@ function addAni(name)
 
 $(document).keypress(function(event){
     if(b===false){
+      $(".start").hide();
         $("h1").text("Level 0");
         nextSequence();
         b=true;
@@ -47,6 +48,7 @@ $(document).keypress(function(event){
 });
 $(".start").click(function(event){
   if(b===false){
+    $(".start").hide();
     $("h1").text("Level 0");
     nextSequence();
     b=true;
@@ -72,6 +74,7 @@ else
       $("body").removeClass("game-over");
     },200);
     $("h1").text("Game Over, Press Any Key to Restart");
+    $(".start").show();
     b=false;
     level=0;
     gpattern=[];
