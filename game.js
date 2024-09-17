@@ -45,6 +45,13 @@ $(document).keypress(function(event){
         b=true;
     }
 });
+$(".start").click(function(event){
+  if(b===false){
+    $("h1").text("Level 0");
+    nextSequence();
+    b=true;
+}
+})
 function checkAns(clevel)
 {
    if(gpattern[clevel]==upattern[clevel])
